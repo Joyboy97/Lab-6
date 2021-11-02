@@ -21,16 +21,32 @@ public class Letter {
 
 	private void SetDefaultScore(Character letter)
 	{
-//		0 Points - Blank tile.
-//		1 Point - A, E, I, L, N, O, R, S, T and U.
-//		2 Points - D and G.
-//		3 Points - B, C, M and P.
-//		4 Points - F, H, V, W and Y.
-//		5 Points - K.
-//		8 Points - J and X.
-//		10 Points - Q and Z.
-		
-		//TODO: Set iScore based on the given letter.  A = 1, B = 3, etc
+
+		switch(iScore) {
+		case 'A': case 'E': case 'I': case 'L': case 'N': case 'O': case 'R': case 'S': case 'T': case 'U':
+			iScore = 1;
+			break;
+		case 'D': case 'G':
+			iScore = 2;
+			break;
+		case 'B': case 'C': case 'M': case 'P':
+			iScore = 3;
+			break;
+		case 'F': case 'H': case 'V': case 'W': case 'Y':
+			iScore = 4;
+			break;
+		case 'K':
+			iScore = 5;
+			break;
+		case 'J': case 'X':
+			iScore = 8;
+			break;
+		case 'Q': case 'Z':
+			iScore = 10;
+			break;
+		default:
+			iScore = 0;
+		}
 	}
 	
 	
